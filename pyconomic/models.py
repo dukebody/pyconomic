@@ -346,7 +346,7 @@ class CashBookEntry(EConomicsModel):
     bank_payment_creditor_invoice_id = EConomicsProperty('BankPaymentCreditorInvoiceId')
     voucher_number = EConomicsProperty('VoucherNumber')
     type = EConomicsProperty('Type')
-    contra_account = EConomicsProperty('ContraAccount')
+    contra_account = EConomicsReference('ContraAccount', 'Account')
     employee = EConomicsReference('Employee', 'Employee')
     text = EConomicsProperty('Text')
     account = EConomicsReference('Account', 'Account')
